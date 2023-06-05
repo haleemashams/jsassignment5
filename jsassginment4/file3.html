@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READ MORE BUTTON</title>
+    
+<!--     
+     <style>
+        .bor{
+            box-shadow: 2px 2px 5px red;
+            
+            border-radius: 10px;
+            border: 1px solid black;
+            height: 170px;
+            padding-left: 18px;
+            padding-right: 20px;
+            background-color: grey;
+            
+        }
+        .border{
+            border: 1px solid black;
+            height: 20px;
+            padding-left: 225px;
+             padding-right: 0px;
+            margin-left: 0px;  
+            border-radius: 10px;
+            width: 715px;
+            margin-top: -1px;
+            background-color: brown;
+            color: white;
+        }
+        #invisible{
+            display: none;
+        }
+        .contain{
+            box-shadow: 2px 2px 5px red;
+            border-radius: 10px;
+            border: 1px solid black;
+            height: 170px;
+            padding-left: 18px;
+            padding-right: 20px;
+            background-color: grey;
+           
+        }
+        .container{
+
+            border: 1px solid black;
+            height: 20px;
+            padding-left: 225px;
+             padding-right: 0px;
+            margin-left: 0px;  
+            border-radius: 10px;
+            width: 715px;
+            margin-top: -1px;
+            background-color: brown;
+            color: white;
+        }
+        #invi{
+          
+            display: none;
+        }
+        
+    </style>  -->
+  <link rel="stylesheet" href="./style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script scr="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#icon').click(function () {
+        $('ul').toggleClass('show');
+
+      })
+
+    });
+  </script>
+</head>
+
+<body style="background-color: purple;">
+  <nav>
+
+    <ul>
+
+
+ 
+      <li><a class="active" href="./index.html"> Login</a> </li>
+      <!-- <li><a href="./file2.html"> chap#21to25</a> </li> -->
+      <li><a href="./file3.html"> Paragraph</a> </li>
+      <li><a href="./file4.html"> Data Table</a> </li>
+      <li><a href="./file5.html"> Image</a> </li>
+
+    </ul>
+
+    <label id="icon">
+      <i class="fa fa-bars"></i>
+    </label>
+
+  </nav>
+    <h2 style="color: black;margin-left: 190px;text-shadow: 2PX 2PX 5px black">**READ MORE AND READ LESS USING (JAVA SCRIPT)**</h2>
+    <div class="bor">
+    <h3 class="border" style="color:white;box-shadow:  2px 5px rgb(164, 160, 160),">THIS IS THE FIRST CONTENT</h3>
+    <P style="color:black "  id="para">
+        " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quisquam assumenda odit incidunt inventore cupiditate voluptate, unde alias pariatur expedita, consequuntur quod sit amet ipsa, sed ipsam maxime eos!""<span id="dots">...</span>
+        <span id="invisible">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quisquam assumenda odit incidunt inventore cupiditate voluptate, unde alias pariatur expedita, consequuntur quod sit amet ipsa, sed ipsam maxime eos!</span>
+        <br>
+        <br>
+        <button  id="btn"style="margin-left: 350px;background-color: black ;color: whitesmoke;border-radius: 10px;"   href="javascript:void(0);"onClick="aiman()">READ MORE</button>
+       
+    </P>
+</div>
+
+
+
+
+
+
+
+<div class="contain">
+    <h3 class="container" style="color:white;box-shadow:  2px 5px rgb(70, 23, 23),">THIS IS THE SECOND CONTENT</h3>
+    <P style="color:black "  id="para">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo vero, voluptas amet tenetur magnam magni. Aperiam, tempore. Voluptas vitae, quasi laudantium molestias saepe aliquid accusamus iusto cumque? Perferendis, amet deleniti?.<span id="comma">...</span>
+        <span id="invisi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus voluptates earum, culpa sequi expedita ad ipsa qui omnis vero id laudantium nemo. Commodi atque molestiae ipsam laboriosam quod dolores. ...</span>
+        <br>
+        <br>
+        <button  id="button"style="margin-left: 350px;background-color: black;color: whitesmoke;border-radius: 10px;"   href="javascript:void(0);"onClick="aroma()">READ MORE</button>
+       
+    </P>
+</div>
+
+         <script>
+            function aiman(){
+         var dots=document.getElementById("dots") ;
+         var invisible=document.getElementById("invisible");
+         var btntext=document.getElementById("btn");
+         if(dots.style.display!="none"){
+            dots.style.display="none";
+            invisible.style.display="inline";
+            btntext.innerHTML="READ LESS";
+         }
+         else{
+            dots.style.display="inline";
+            invisible.style.display="none";
+            btntext.innerHTML="READ MORE"
+
+         }
+        }
+        function aroma(){
+
+var a=document.getElementById("comma");
+var b=document.getElementById("invisi");
+document.getElementById("button");
+if(comma.style.display!="none"){
+    comma.style.display="none";
+    invisi.style.display="inline";
+    button.innerHTML="READ LESS"
+}
+else{
+    comma.style.display="inline";
+            invisi.style.display="none";
+            button.innerHTML="READ MORE"
+
+}
+
+
+        }
+
+        
+
+       
+        
+    </script>
+    
+</body>
+</html>

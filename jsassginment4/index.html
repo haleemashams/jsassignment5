@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script scr="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#icon').click(function () {
+          $('ul').toggleClass('show');
+  
+        })
+  
+      });
+    </script>
+  </head>
+  
+  <body style=" background-color : #E5AF6F;">
+    <nav>
+  
+        <ul>
+
+
+            <li><a class="active" href="./index.html"> Login</a> </li>
+            <!-- <li><a href="./file2.html"> chap#21to25</a> </li> -->
+            <li><a href="./file3.html"> Paragraph</a> </li>
+            <li><a href="./file4.html"> Data Table</a> </li>
+            <li><a href="./file5.html"> Image</a> </li>
+      
+          </ul>
+  
+      <label id="icon">
+        <i class="fa fa-bars"></i>
+      </label>
+  
+    </nav>
+  
+    <h1 style="margin-left: 490px;text-shadow: 2px 2px 5px black;">
+       ** LOGIN PAGE **
+    </h1>
+    <form style="margin-top: 100px;margin-left: 200px" id="form">
+
+        <div style="color: whitesmoke; margin-left: 300px;">
+            USER NAME:
+            <input style="color: white; border-radius: 10px;" type="text" required="required" id="name">
+        </div>
+        
+
+        <br>
+        <div style="color: whitesmoke;margin-left: 300px;">
+            EMAIL:
+            <input style="margin-left: 40px;border-radius: 10px;" type="email" required="required" id="email">
+        </div>
+        <br>
+        <div style="color: whitesmoke;margin-left: 300px;">
+            PASSWORD:
+            <input  style="margin-left: 6px;border-radius: 10px;"    type="password" required="required" id="password">
+        </div>
+        <br>
+        <div style="color: whitesmoke;margin-left: 450px;">
+            <input style="border-radius: 5px;width: 100px;color: rgb(255, 0, 76);background-color: black;"  type="submit" onclick="displayValues(event)">
+        </div>
+        
+    </form>
+
+    <div id="result"></div>
+
+
+    <script>
+        function displayValues(event) {
+            event.preventDefault(); 
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <p  style="color: white;margin-left: 500px;">USER NAME: ${ name}</p>
+                <p style="color: white;margin-left: 500px;">EMAIL: ${email}</p>
+                <p style="color: white;margin-left: 500px;">PASSWORD: ${password}</p>
+            `;
+
+            console.log(name);
+            console.log(email);
+            console.log(password);
+        }
+    </script>
+</body>
+</html>

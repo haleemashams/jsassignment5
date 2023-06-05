@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set_images_js</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script scr="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#icon').click(function () {
+          $('ul').toggleClass('show');
+  
+        })
+  
+      });
+    </script>
+  </head>
+  
+  <body style="background-color: tomato;">
+    <nav>
+  
+        <ul>
+
+
+          
+          <li><a class="active" href="./index.html"> Login</a> </li>
+          <!-- <li><a href="./file2.html"> chap#21to25</a> </li> -->
+          <li><a href="./file3.html"> Paragraph</a> </li>
+          <li><a href="./file4.html"> Data Table</a> </li>
+          <li><a href="./file5.html"> Image</a> </li>
+      
+          </ul>
+  
+      <label id="icon">
+        <i class="fa fa-bars"></i>
+      </label>
+  
+    </nav>
+    <h1 style="margin-left: 350px;">
+        DISPLAY IMAGES(using diffrents events)
+    </h1>
+
+     <!-- <img style="border-radius: 10px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOe-WQ_fyuBd9Q8IS466Z3OB3cI7Dzv6SOCScp6REJxbm_Hg7pmUnTwSD7HSnBsfbm3S4&usqp=CAU"onFocus="src='https://st.hzcdn.com/simgs/pictures/pools/unique-nature-integrated-spa-vollmer-custom-pools-llc-img~3c1141bb05ca4bb3_9-0274-1-d78b47d.jpg'"         height="280px"alt="nature imag"title="nature images">
+
+    <img style="border-radius: 10px;" src="https://thumbs.dreamstime.com/b/piece-beautiful-nature-landscape-print-ready-px-dpi-cm-269165990.jpg"height="280px"alt="nature imag"title="nature images">
+
+    <img style="border-radius: 10px;" src="https://wallpapercave.com/wp/wp5193189.jpg"height="280"alt="nature imag"title="nature images"> -->
+
+
+
+    <img  style="border-radius: 10px;" src="./nature0.jpg" onMouseover="src='https://e0.pxfuel.com/wallpapers/692/714/desktop-wallpaper-beautiful-nature-latest-beauty-nature.jpg'">
+
+
+
+    <p id="text" style="font-size: 16px;color: rgb(14, 13, 13);">This is a paragraph.Aiamn khan i am 17 yeaqrs old. Click the buttons below to zoom in or zoom out Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor reprehenderit omnis maiores aspernatur libero debitis voluptas soluta amet cupiditate accusantium quam nobis blanditiis quisquam totam, labore eligendi accusamus deserunt expedita!.</p>
+
+    <button style="background-color: black;color: white;" onclick="zoomIn()">Zoom In (+)</button>
+    <button  style="background-color: black;color: white;" onclick="zoomOut()">Zoom Out (-)</button>
+    
+    <script>
+      function zoomIn() {
+        var text = document.getElementById("text");
+        var currentSize = parseInt(window.getComputedStyle(text).fontSize);
+        text.style.fontSize = (currentSize + 10) + "px";
+      }
+    
+      function zoomOut() {
+        var text = document.getElementById("text");
+        var currentSize = parseInt(window.getComputedStyle(text).fontSize);
+        text.style.fontSize = (currentSize - 10) + "px";
+      }
+    </script>
+    
+</body>
+</html>
